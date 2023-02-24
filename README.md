@@ -85,7 +85,7 @@ For every element of A, the algorithm traverses all elements of B that can possi
 
 So, why does this algorithm find the ***maximum*** possible number of matches?
 
-Visualize the ordered pairs of A and B as points in a Cartesian coordinate plane. Let a be an element of A. The geometric lines x = a.x and y = a.y divide the plane into 4 regions. Only elements of B in the lower left region match a. The algorithm traverses the elements of A from left to right. Every element of A that can match an element of B is matched with the highest unremoved element of B (the one with the greatest y value) in the lower left region.
+Visualize the ordered pairs of A and B as points in a Cartesian coordinate plane. Let a be an element of A. The geometric lines x = a.x and y = a.y divide the plane into 4 regions. Only elements of B in the lower left region match a. The algorithm traverses the elements of A from left to right. Every element of A, a, that can match an element of B is matched with the highest unremoved element of B (the one with the greatest y value) in the region below and to the left of a.
 
 For example, if<br/>
 A = [(4, 3), (5, 1)]<br/>
@@ -95,7 +95,17 @@ then (4, 3) is traversed first and it's matched with (2, 2). (4, 3) can also mat
 The algorithm ensures the maximum possible number of matches is made. The first (leftmost) element of A that can match an element of B is matched with one such that the kind of problem I described is avoided. If a subsequent element of A can match with the element of B the first matched element of A is matched with, then it can also match with any of the other elements of B that the first matched element of A could have been matched with. So, the first match made doesn't decrease the possible number of matches that can be made overall. The first matched element of A and the element of B it's matched with can be taken out of consideration (the algorithm does this by incrementing i by 1 and removing matched elements of B) with the count of matches made being increased by 1. The problem of making the maximum possible number of matches with the remaining elements of A and B is the same as the original problem, so the same approach can be taken to it (which the algorithm's outer loop does).
 
 ### Computational Complexity
-TODO
+#### Time Complexity
+**O(N<sup>2</sup>)**, Quadratic
+
+This is a vast improvement over the time complexity of a brute-force algorithm that computes every possible list of simultaneous matches that can be made so it can then return the maximum possible number of matches that can be made.
+
+Note: the time complexity of the REMOVE method could be O(N) depending on how it's implemented, but this doesn't change the algorithm's overall time complexity.
+
+#### Space Complexity
+**O(N)** or **O(1)** or the space complexity of the sorting algorithm chosen
+
+If the REMOVE method creates a new data structure (when an array is resized, for example), then it's space complexity is O(N).
 
 ## Application
 TODO
