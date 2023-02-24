@@ -87,6 +87,8 @@ So, why does this algorithm find the ***maximum*** possible number of matches?
 
 Visualize the ordered pairs of A and B as points in a Cartesian coordinate plane. Let a be an element of A. The geometric lines x = a.x and y = a.y divide the plane into 4 regions. Only elements of B in the lower left region match a. The algorithm traverses the elements of A from left to right. Every element of A, a, that can match an element of B is matched with the highest unremoved element of B (the one with the greatest y value) in the region below and to the left of a.
 
+<img src="points.png">
+
 For example, if<br/>
 A = [(4, 3), (5, 1)]<br/>
 B = [(2, 2), (3, 1)]<br/>
