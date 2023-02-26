@@ -84,7 +84,7 @@ If the x coordinate of the current element of A is less than the x coordinate of
 
 In the opposite case (when ```A[i].x >= B[0].x```), the algorithm traverses B in order until either the end of B is reached or it finds an element of B with a greater x coordinate than the x coordinate of the current element of A, in which case the remaining, untraversed elements of B can't match the current element of A. But the traversed elements of B possibly can.
 
-For every element of A, the algorithm traverses all elements of B that can possibly match it and checks whether any do. So, the algorithm doesn't miss any possible matches. If the algorithm finds a match, it keeps track of the index of the matching element of B with the greatest y coordinate value. After traversing B, the algorithm removes this matching element from B and increase the count of matches. Removing this element ensures the algorithm doesn't count it as a match for any other element of A.
+For every element of A, the algorithm traverses all elements of B that can possibly match it and checks whether any do. So, the algorithm doesn't miss any possible matches. If the algorithm finds a match, it keeps track of the index of the matching element of B with the greatest y coordinate value. After traversing B, the algorithm removes this matching element from B and increases the count of matches by 1. Removing this element ensures the algorithm doesn't count it as a match for any other element of A.
 
 So, why does this algorithm find the ***maximum*** possible number of matches?
 
