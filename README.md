@@ -74,8 +74,11 @@ WHILE i < A.length AND B.length > 0
 
 RETURN numMatches
 ```
+
+Note: This algorithm can be modified to store matches between elements of A and elements of B in a data structure and then return this data structure. The data structure would be of maximum possible size.
+
 ### Explanation of the Algorithm and Proof of it's Correctness
-First, A and B are sorted. Then A is traversed in order.
+First, A and B are sorted such that the x coordinates of their elements are ascending. Then A is traversed in order.
 
 If the x coordinate of the current element of A is less than the x coordinate of the first element of B, then the current element of A can't match any element of B (due to the ascencion of x coordinates), so the algorithm moves on to the next element of A.
 
@@ -110,4 +113,4 @@ Note: the time complexity of the REMOVE method could be O(N) depending on how it
 If the REMOVE method creates a new data structure (when an array is resized, for example), then it's space complexity is O(N).
 
 ## Application
-TODO
+Suppose you have a list of items (list A) and a list of specs for items (list B) and you're tasked with matching up the items with the specs such that only one item can be matched with a spec. Each spec consists of values for the same two numerical attributes. For an item to meet a spec, it's values for these two numerical attributes must both be greater than or equal to the corresponding values for these attributes in the spec. In other words, the item must "match" the spec. My algorithm can find the maximum number of specs that can be met simultaneously. The modified version of it can produce a data structure of matches between items and specs of maximum possible size.
