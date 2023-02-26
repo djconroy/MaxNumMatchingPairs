@@ -110,7 +110,7 @@ Note: the time complexity of the REMOVE method could be O(N) depending on how it
 #### Space Complexity
 **O(N)** or **O(1)** or the space complexity of the sorting algorithm chosen
 
-If it's preferable not to remove elements of list B, then a copy of list of B can be made so that elements can be removed from the copy instead. The space complexity of the algorithm would then be O(N).
+If it's preferable not to remove elements of list B, then a copy of list of B can be made so that elements can be removed from the copy instead. Alternatively, a boolean array could be used to keep track of which elements of B have "removed" status. In either case, the space complexity of the algorithm would then be O(N).
 
 If the REMOVE method creates a new data structure (when an array is resized, for example), then it's space complexity is O(N).
 
