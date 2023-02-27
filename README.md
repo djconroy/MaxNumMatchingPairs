@@ -101,7 +101,7 @@ The algorithm ensures the maximum possible number of matches is made. The first 
 
 ### Computational Complexity
 #### Time Complexity
-**O(N<sup>2</sup>)**, Quadratic
+**O(N<sup>2</sup>)**, Quadratic, provided the sorting algorithm chosen doesn't have a time complexity worse than this
 
 This is a vast improvement over the time complexity of a brute-force algorithm that computes every possible list of simultaneous matches that can be made so it can then return the maximum possible number of matches that can be made.
 
