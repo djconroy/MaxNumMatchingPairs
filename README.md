@@ -1,4 +1,4 @@
-# MaxNumMatchingPairs
+# Maximum Number of Matching Pairs
 
 ## Problem
 ### Input
