@@ -22,7 +22,7 @@ In the example above:
 
 ***Don't scroll down to the solution below if you want to try to solve this problem by yourself!***
 
-There is an efficient solution to this problem. If you want to try to find it, give yourself plenty of time to think about it.<br/>
+There is an efficient solution to this problem (compared to the brute-force solution). If you want to try to find it, give yourself plenty of time to think about it.<br/>
 Tip: visualization of the ordered pairs as points in the plane may help. <br/>
 .<br/>
 .<br/>
