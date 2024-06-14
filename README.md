@@ -1,4 +1,5 @@
 # Maximum Number of Matching Pairs
+An original and efficient algorithm that solves an interesting optimization problem. The problem occurred to me a while ago. I don't know if the problem has occurred to others.
 
 ## Problem
 ### Input
