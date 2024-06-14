@@ -62,20 +62,16 @@ SORT(A)
 SORT(B)
 
 LET numMatches = 0
-LET i = 0
-WHILE i < A.length AND B.length > 0
+FOR i = 0; i < A.length AND B.length > 0; i = i + 1
     IF A[i].x >= B[0].x
         LET indexNearestY = -1
-        LET j = 0
-        WHILE j < B.length AND A[i].x >= B[j].x
+        FOR j = 0; j < B.length AND A[i].x >= B[j].x; j = j + 1
             IF A[i].y >= B[j].y
                 IF indexNearestY == -1 OR B[j].y > B[indexNearestY].y
                     indexNearestY = j
-            j = j + 1
         IF indexNearestY >= 0
             numMatches = numMatches + 1
             REMOVE(B, indexNearestY) // Method to remove element B[indexNearestY] from B. Reduces B.length by 1.
-    i = i + 1
 
 RETURN numMatches
 ```
