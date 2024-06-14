@@ -22,7 +22,7 @@ In the example above:
 - So, the maximum possible number of simultaneous matches (matching pairs) that can be made is **2**, e.g., [(7, 4), (-6, 4)], [(6, -1), (1, -2)]
 
 ## Application
-Suppose you have a list of items (list A) and a list of specs for items (list B) and you're tasked with matching up the items with the specs such that only one item can be matched with a spec. Each spec consists of values for the same two numerical attributes. For an item to meet a spec, it's values for these two numerical attributes must both be greater than or equal to the corresponding values for these attributes in the spec. In other words, the item must "match" the spec. My algorithm can find the maximum number of specs that can be met simultaneously. The modified version of it can produce a data structure of matches between items and specs of maximum possible size.
+Suppose you have a list of items (list A) and a list of specs for items (list B) and you're tasked with matching up the items with the specs such that only one item can be matched with a spec. Each spec consists of values for the same two numerical attributes. For an item to meet a spec, its values for these two numerical attributes must be greater than or equal to the corresponding values for these attributes in the spec. In other words, the item must "match" the spec. My algorithm can find the maximum number of specs that can be met simultaneously. The modified version of it can produce a data structure of matches between items and specs of maximum possible size.
 
 ***
 
@@ -79,7 +79,7 @@ RETURN numMatches
 
 Note: This algorithm can be modified to store matches between elements of A and elements of B in a data structure and then return this data structure. The data structure would be of maximum possible size.
 
-### Explanation of the Algorithm and Proof of it's Correctness
+### Explanation of the Algorithm and Proof of its Correctness
 First, A and B are sorted such that the x coordinates of their elements are ascending. Then A is traversed in order.
 
 If the x coordinate of the current element of A is less than the x coordinate of the first element of B, then the current element of A can't match any element of B (due to the ascencion of x coordinates), so the algorithm moves on to the next element of A.
@@ -114,4 +114,4 @@ Note: the time complexity of the REMOVE method could be O(N) depending on how it
 
 If it's preferable not to remove elements of list B, then a copy of list of B can be made so that elements can be removed from the copy instead. Alternatively, a boolean array could be used to keep track of which elements of B have "removed" status. In either case, the space complexity of the algorithm would then be O(N).
 
-If the REMOVE method creates a new data structure (when an array is resized, for example), then it's space complexity is O(N).
+If the REMOVE method creates a new data structure (when an array is resized, for example), then its space complexity is O(N).
