@@ -103,15 +103,15 @@ The algorithm ensures the maximum possible number of matches is made. The first 
 
 ### Computational Complexity
 #### Time Complexity
-**O(N<sup>2</sup>)**, Quadratic (provided the sorting algorithm chosen doesn't have a time complexity worse than this)
+**O(N * M)** (provided SORT doesn't have a time complexity worse than this)
 
 This is a vast improvement over the time complexity of a brute-force algorithm that computes every possible list of simultaneous matches that can be made so it can then return the maximum possible number of matches that can be made.
 
-Note: the time complexity of the REMOVE method could be O(N) depending on how it's implemented, but this doesn't change the algorithm's overall time complexity.
+Note: the time complexity of the REMOVE method could be O(M) depending on how it's implemented, but this doesn't change the algorithm's overall time complexity.
 
 #### Space Complexity
-**O(N)** or **O(1)** or the space complexity of the sorting algorithm chosen
+The space complexity of SORT or the space complexity of REMOVE, whichever's worse. The space complexity of the version of the algorithm that returns a data structure of matches is at least **O(the maximum number of matches)**.
 
-If it's preferable not to remove elements of list B, then a copy of list of B can be made so that elements can be removed from the copy instead. Alternatively, a boolean array could be used to keep track of which elements of B have "removed" status. In either case, the space complexity of the algorithm would then be O(N).
+If it's preferable not to remove elements of list B, then a copy of list of B can be made so that elements can be removed from the copy instead. Alternatively, a boolean array could be used to keep track of which elements of B have "removed" status. In either case, the space complexity of the algorithm would then be O(M).
 
-If the REMOVE method creates a new data structure (when an array is resized, for example), then its space complexity is O(N).
+If the REMOVE method creates a new data structure (when an array is resized, for example), then its space complexity is O(M).
